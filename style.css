@@ -1,0 +1,291 @@
+/* RESET DA PÁGINA */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 5%;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.header img {
+  width: 100px;
+  height: auto;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 12px;
+  text-transform: uppercase;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: 0.5s;
+}
+
+.navbar a:hover {
+  color: #e21761;
+}
+
+/* TAMANHO DAS IMAGENS */
+.group img {
+  width: auto;
+  height: 250px;
+}
+
+/* INÍCIO DO CARROSSEL */
+.carrossel {
+  display: flex;
+  overflow-x: auto;
+}
+
+.carrossel::-webkit-scrollbar {
+  display: none;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 1em; */
+  animation: spin 22s infinite linear;
+  padding-right: 1em;
+}
+
+.card {
+  flex: 0 0 5em;
+  height: 12em;
+  padding: 1em;
+}
+
+@keyframes spin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
+}
+/* FIM DO CARROSSEL */
+
+/* DESCRIÇÃO */
+.descricao h1 {
+  padding-top: 2rem;
+}
+
+.descricao h1,
+p {
+  text-align: center;
+  line-height: 1.5rem;
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+  color: #333333;
+}
+/* FIM DESCRIÇÃO */
+
+/* PRODUTOS */
+.container-produtos {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: start;
+  padding: 40px 0;
+}
+
+.produto {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 300px;
+  height: 500px;
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.imagem-produto {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.imagem-produto img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.body-descricao {
+  padding: 18px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.title-produto {
+  color: #333333;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.description-produto {
+  font-size: 13px;
+  text-align: left !important;
+  color: #333333;
+  opacity: 0.95;
+  line-height: 1.45;
+}
+
+.description-produto {
+  text-align: left !important;
+}
+
+.price {
+  margin-top: 12px;
+  font-size: 24px;
+  font-weight: 550;
+  color: #e21761;
+}
+
+/* RESPONSIVO: TELAS PEQUENAS EMPILHADAS */
+@media (max-width: 900px) {
+  .produtos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .produto {
+    max-width: none;
+  }
+}
+
+/* RESPONSIVIDADE PARA CELULARES */
+@media (max-width: 576px) {
+  .imagem-produto img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .body-descricao > .title-produto,
+  .body-descricao > .description-produto {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  .descricao h1,
+  p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .descricao h1 {
+    font-size: 2rem;
+    padding-top: 1.5rem;
+  }
+  .produtos {
+    gap: 20px;
+    padding: 0 20px;
+    margin: 20px 0;
+  }
+}
+/* FIM DA RESPONSIVIDADE PARA CELULARES */
+
+/* FOOTER */
+.footer {
+  width: 100%;
+  height: 350px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 0, 153, 0.7),
+    rgba(102, 0, 255, 0.7)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.footer img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.footer p {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* MIDIA SOCIAL */
+.midia-social {
+  display: flex;
+  gap: 10px;
+}
+
+.fa-square-instagram,
+.fa-tiktok {
+  font-size: 40px;
+  color: #f8f8f8;
+  padding-bottom: 10px;
+}
+
+li {
+  list-style: none;
+}
+
+.copy p {
+  font-size: 1rem;
+  color: #f8f8f8;
+}
+
+.footer-line {
+  width: 90%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 20px;
+}
+
+/* WHATSAPP */
+.btn-whats {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.btn-whats img {
+  width: 40px;
+  height: auto;
+  transition: 0.3s ease-in-out;
+  opacity: 0.8;
+}
+
+.btn-whats img:hover {
+  opacity: 1;
+  transform: scale(1.5);
+}
